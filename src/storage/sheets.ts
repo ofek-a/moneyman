@@ -111,8 +111,10 @@ export class GoogleSheetsStorage implements TransactionStorage {
 
     const {
       GOOGLE_SERVICE_ACCOUNT_EMAIL: client_email,
-      GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY: private_key,
+      GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY: private_key_with_backticks,
     } = process.env;
+
+    const private_key = private_key_with_backticks?.replace(`"`, "");
 
     if (client_email && private_key) {
       logger("Using ServiceAccountAuth");
