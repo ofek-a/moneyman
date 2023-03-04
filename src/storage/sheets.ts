@@ -135,7 +135,7 @@ export class GoogleSheetsStorage implements TransactionStorage {
 
   private transactionRow(tx: TransactionRow): Array<string> {
     return [
-      /* date */ format(parseISO(tx.date), "dd/MM/yyyy", {}),
+      /* date */ format(parseISO(tx.date), "MM-dd-yyyy", {}),
       /* amount */ String(tx.chargedAmount),
       /* description */ tx.description,
       /* memo */ tx.memo ?? "",
