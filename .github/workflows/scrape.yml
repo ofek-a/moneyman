@@ -49,8 +49,8 @@ jobs:
         env:
           DEBUG: ""
           TZ: "Asia/Jerusalem"
-          DAYS_BACK: ${{ github.event.inputs.daysBack || "20" }}
-          WORKSHEET_NAME: ${{ github.event.inputs.worksheetName || "Transactions" }}
+          DAYS_BACK: ${{ github.event.inputs.daysBack || '20' }}
+          WORKSHEET_NAME: ${{ github.event.inputs.worksheetName || 'Transactions' }}
           ACCOUNTS_TO_SCRAPE: ${{ github.event.inputs.accountsToScrape }}
           ACCOUNTS_JSON: ${{ secrets.ACCOUNTS_JSON }}
           TELEGRAM_API_KEY: ${{ secrets.TELEGRAM_API_KEY }}
