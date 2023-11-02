@@ -73,22 +73,26 @@ If you want to see them, use the `DEBUG` environment variable with the value `mo
 Use the following env vars to setup the data fetching:
 
 #### ACCOUNTS_JSON
+
 A json array of accounts following [this](https://github.com/eshaham/israeli-bank-scrapers#specific-definitions-per-scraper) schema with an additional `companyId` field with a [companyType](https://github.com/eshaham/israeli-bank-scrapers/blob/master/src/definitions.ts#L5:L23) as the value.
 
 Example:
+
 ```json
 [
   { "companyId": "hapoalim", "userCode": "AB1234", "password": "p@ssword" },
   { "companyId": "visaCal", "username": "Ploni Almoni", "password": "p@ssword" }
 ]
 ```
+
 #### Other configurations
 
-| env variable name    | default            | description                                                                                           |
-| -------------------- | -------------------| ----------------------------------------------------------------------------------------------------- |
-| `ACCOUNTS_TO_SCRAPE` | `[]`               | A comma separated list of providers to take from `ACCOUNTS_JSON`. if empty, all accounts will be used |
-| `DAYS_BACK`          | `10`               | The amount of days back to scrape                                                                     |
-| `TZ`                 | `'Asia/Jerusalem'` | A timezone for the process - used for the formatting of the timestamp                                 |
+| env variable name    | default            | description                                                                                                  |
+| -------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ACCOUNTS_TO_SCRAPE` | `[]`               | A comma separated list of providers to take from `ACCOUNTS_JSON`. if empty, all accounts will be used        |
+| `DAYS_BACK`          | `10`               | The amount of days back to scrape                                                                            |
+| `TZ`                 | `'Asia/Jerusalem'` | A timezone for the process - used for the formatting of the timestamp                                        |
+| `FUTURE_MONTHS`      | `1`                | The amount of months that will be scrapped in the future, starting from the day calculated using `DAYS_BACK` |
 
 ### Get notified in telegram
 
