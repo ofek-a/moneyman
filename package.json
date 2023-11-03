@@ -34,7 +34,7 @@
     "dotenv": "^16.3.1",
     "google-auth-library": "^8.8.0",
     "google-spreadsheet": "^4.1.0",
-    "israeli-bank-scrapers": "^4.0.2",
+    "israeli-bank-scrapers": "https://github.com/ofek-a/israeli-bank-scrapers.git",
     "telegraf": "^4.14.0"
   },
   "devDependencies": {
@@ -45,5 +45,8 @@
     "prettier": "^3.0.3",
     "ts-jest": "^29.1.1",
     "typescript": "^5.2.2"
+  },
+  "volta": {
+    "node": "18.15.0"
   }
 }

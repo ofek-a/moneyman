@@ -14,6 +14,8 @@ export async function getAccountTransactions(
   logger(`started`);
   try {
     const scraper = createScraper({
+      timeout: 500000,
+      defaultTimeout: 500000,
       startDate,
       companyId: account.companyId,
       args: ["--disable-dev-shm-usage", "--no-sandbox"],
