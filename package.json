@@ -9,6 +9,7 @@
   },
   "scripts": {
     "act": "go run github.com/nektos/act@latest",
+    "dev": "tsx src/index.ts",
     "start": "node dst/index.js",
     "start:container": "docker compose up",
     "postinstall": "patch-package",
@@ -27,15 +28,15 @@
   },
   "homepage": "https://github.com/daniel-hauser/moneyman#readme",
   "dependencies": {
-    "azure-kusto-data": "^5.2.1",
-    "azure-kusto-ingest": "^5.2.1",
-    "date-fns": "^2.30.0",
-    "debug": "^4.3.4",
-    "dotenv": "^16.3.1",
-    "google-auth-library": "^8.8.0",
-    "google-spreadsheet": "^4.1.0",
-    "israeli-bank-scrapers": "https://github.com/ofek-a/israeli-bank-scrapers.git",
-    "telegraf": "^4.14.0"
+    "azure-kusto-data": "5.2.1",
+    "azure-kusto-ingest": "5.2.1",
+    "date-fns": "2.30.0",
+    "debug": "4.3.4",
+    "dotenv": "16.3.1",
+    "google-auth-library": "8.9.0",
+    "google-spreadsheet": "4.1.0",
+    "israeli-bank-scrapers": "5.4.6",
+    "telegraf": "4.14.0"
   },
   "devDependencies": {
     "@types/debug": "^4.1.9",
@@ -44,6 +45,7 @@
     "patch-package": "^8.0.0",
     "prettier": "^3.0.3",
     "ts-jest": "^29.1.1",
+    "tsx": "4.19.3",
     "typescript": "^5.2.2"
   },
   "volta": {
